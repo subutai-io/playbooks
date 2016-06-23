@@ -1,0 +1,13 @@
+.idea
+target
+*.swp
+*.iml
+*.log
+*.idea
+*.classes
+*.o
+*.mk
+*.a
+*.deb
+*~
+.DS_Store
