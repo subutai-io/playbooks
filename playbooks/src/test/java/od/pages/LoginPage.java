@@ -8,7 +8,7 @@ public class LoginPage extends PageObject {
 
     //region WEB ELEMENTS: Fields
 
-    @FindBy(xpath = "*//input[@class=\"b-form-input b-form-input_full ng-pristine ng-valid ng-touched\"]")
+    @FindBy(name = "login")
     public WebElementFacade inputLogin;
 
     @FindBy(id = "subt-input__password")
