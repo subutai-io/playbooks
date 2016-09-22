@@ -30,7 +30,6 @@ public class DefSubutaiStepsGiven {
 
     @Given("the user enters login and password: '$login', '$password'")
     public void enter_login_and_password(String login, String password) throws FileNotFoundException {
-
         subutaiSteps.inputLogin(login);
         subutaiSteps.inputPassword(password);
     }

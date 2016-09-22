@@ -118,6 +118,9 @@ public class DefSubutaiStepsWhen {
     @When("the user creates environment using template: Master")
     public void user_creates_environment_using_template_master() throws FindFailed, FileNotFoundException {
         subutaiSteps.clickOnIconTemplateMaster();
+        subutaiSteps.clickOnIconTemplateMaster();
+        subutaiSteps.clickOnIconTemplateMaster();
+        subutaiSteps.clickOnIconTemplateMaster();
         subutaiSteps.clickOnButtonApply();
         subutaiSteps.inputEnvironmentName("Test Environment Master");
         subutaiSteps.clickOnButtonBuild();
@@ -131,6 +134,24 @@ public class DefSubutaiStepsWhen {
         subutaiSteps.clickOnButtonApply();
         subutaiSteps.clickOnButtonNext();
         subutaiSteps.clickOnButtonCloseBuildPopup();
+    }
+
+    @When("the user enters login and password: '$login', '$password'")
+    public void enter_login_and_password(String login, String password) throws FileNotFoundException {
+        subutaiSteps.inputLogin(login);
+        subutaiSteps.inputPassword(password);
+    }
+
+    @When("the user enters new password: '$password'")
+    public void enter_new_password(String password) throws FindFailed {
+        subutaiSteps.inputNewPassword(password);
+        subutaiSteps.inputConfirmPasswordOnLogin(password);
+        subutaiSteps.clickOnButtonSaveAndLogin();
+    }
+
+    @When("the user clicks on the button: Login")
+    public void clicks_button_login() throws FindFailed {
+        subutaiSteps.clickOnButtonLogin();
     }
 
     @When("the user creates environment with 3 containers using template: Master")

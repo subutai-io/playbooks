@@ -20,6 +20,12 @@ public class MonitoringPage extends PageObject {
 
     //region WEB ELEMENTS: Links
 
+    @FindBy(xpath = "*//li[@ng-class=\"monitoringCtrl.currentType == 'environments' ? 'b-tabs-menu__item_active' : ''\"]")
+    public WebElementFacade EnvironmentTab;
+
+    @FindBy(xpath = "*//li[@ng-class=\"monitoringCtrl.currentType == 'management' ? 'b-tabs-menu__item_active' : ''\"]")
+    public WebElementFacade ManagementTab;
+
     //endregion
 
     //region WEB ELEMENTS: Tables

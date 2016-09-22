@@ -82,6 +82,16 @@ public class SubutaiSteps extends ScenarioSteps {
     }
 
     @Step
+    public void inputNewPassword(String password){
+        loginPage.inputNewPassword.type(password);
+    }
+
+    @Step
+    public void inputConfirmPasswordOnLogin(String password){
+        loginPage.inputConfirmPassword.type(password);
+    }
+
+    @Step
     public void inputEnvironmentName(String env_name){
         environmentsPage.inputEnvironmentName.type(env_name);
     }
@@ -219,29 +229,42 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnButtonLogin() throws FindFailed {
-//        loginPage.buttonLogin.click();
-        screen.click(commonPage.sikuliButtonLogin);
+        loginPage.buttonLogin.click();
+        if (loginPage.LoginError.containsText("Wrong Auth Credentials")) {
+            inputPassword("secret1");
+            loginPage.buttonLogin.click();
+        } else {
+            inputNewPassword("secret1");
+            inputConfirmPasswordOnLogin("secret1");
+            clickOnButtonSaveAndLogin();
+        }
+    }
+
+    @Step
+    public void clickOnButtonSaveAndLogin() throws FindFailed {
+//        screen.click(commonPage.sikuliButtonLogin);
+        loginPage.buttonSaveAndLogin.click();
     }
 
     @Step
     public void clickOnMenuItemMonitoring() throws FindFailed {
-//        commonPage.linkMonitoring.click();
-        screen.click(commonPage.sikuliMenuItemMonitoring);
-        commonPage.waitFor(2000);
+//        screen.click(commonPage.sikuliMenuItemMonitoring);
+        assertThat(commonPage.linkMonitoring.isVisible(),is(true));
+        commonPage.linkMonitoring.click();
     }
 
     @Step
     public void clickOnSelectorHostsMonitoringPage() throws FindFailed {
-//        monitoringPage.selectorHosts.click();
-        screen.click(monitoringPage.sikuliMenuIconRH);
-        commonPage.waitFor(2000);
+//        screen.click(monitoringPage.sikuliMenuIconRH);
+        assertThat(monitoringPage.selectorHosts.isCurrentlyEnabled(),is(true));
+        monitoringPage.selectorHosts.click();
     }
 
     @Step
     public void clickOnMenuEnvironment() throws FindFailed {
-//        commonPage.linkEnvironment.click();
-        screen.click(commonPage.sikuliMenuItemEnvironment);
-        commonPage.waitFor(2000);
+        assertThat(commonPage.linkEnvironment.isVisible(),is(true));
+        commonPage.linkEnvironment.click();
+//        screen.click(commonPage.sikuliMenuItemEnvironment);
     }
 
     @Step
@@ -251,8 +274,9 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnMenuItemEnvironments() throws FindFailed {
-//        commonPage.linkEnvironments.click();
-        screen.click(commonPage.sikuliMenuItemEnvironments);
+        assertThat(commonPage.linkEnvironments.isVisible(),is(true));
+        commonPage.linkEnvironments.click();
+//        screen.click(commonPage.sikuliMenuItemEnvironments);
     }
 
     @Step
@@ -351,30 +375,40 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnButtonApply() throws FindFailed {
-        screen.click(environmentsPage.sikuliButtonApply);
+        assertThat(environmentsPage.buttonApply.isVisible(),is(true));
+        environmentsPage.buttonApply.click();
+//        screen.click(environmentsPage.sikuliButtonApply);
     }
 
     @Step
     public void clickOnButtonBuild() throws FindFailed {
-        screen.click(environmentsPage.sikuliButtonBuild);
-//        waitABit(20000);
+        assertThat(environmentsPage.buttonBuild.isVisible(),is(true));
+        environmentsPage.buttonBuild.click();
+//        screen.click(environmentsPage.sikuliButtonBuild);
     }
 
     @Step
     public void clickOnButtonCloseBuildPopup() throws FindFailed {
 //        commonPage.waitFor(environmentsPage.buttonClose);
-        environmentsPage.waitForCloseButton();
-        screen.click(environmentsPage.sikuliButtonClosePopupBuild);
+          environmentsPage.waitForCloseButton();
+        environmentsPage.buttonClose.click();
+//        screen.click(environmentsPage.sikuliButtonClosePopupBuild);
     }
 
     @Step
     public void clickOnIconDeleteEnvironment() throws FindFailed {
-        screen.click(environmentsPage.sikuliIconDeleteEnvironment);
+        assertThat(environmentsPage.buttonDeleteEnvironment.isVisible(),is(true));
+        environmentsPage.buttonDeleteEnvironment.click();
+//        screen.click(environmentsPage.sikuliIconDeleteEnvironment);
     }
 
     @Step
     public void clickOnButtonDelete() throws FindFailed {
-        screen.click(environmentsPage.sikuliButtonDelete);
+        waitABit(3000);
+        assertThat(environmentsPage.buttonDelete.isVisible(),is(true));
+        environmentsPage.buttonDelete.click();
+//        screen.click(environmentsPage.sikuliButtonDelete);
+        waitABit(3000);
 //        waitABit(1000000);
     }
 
@@ -442,23 +476,30 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnUpperMenuItemRegisterPeer() throws FindFailed {
-        screen.click(commonPage.sikuliUpperMenuItemRegisterPeer);
+        assertThat(commonPage.titleUpperMenuRegisterPeer.isVisible(),is(true));
+        commonPage.titleUpperMenuRegisterPeer.click();
+//        screen.click(commonPage.sikuliUpperMenuItemRegisterPeer);
     }
 
     @Step
     public void clickOnIconNotifications() throws FindFailed {
-        screen.click(commonPage.sikuliIconNotifications);
+        assertThat(commonPage.upperMenuNotificationsBody.isCurrentlyEnabled(),is(true));
+        commonPage.upperMenuNotificationsBody.click();
+//        screen.click(commonPage.sikuliIconNotifications);
     }
 
     @Step
     public void clickOnAdvancedMode() throws FindFailed {
         //screen.click(environmentsPage.sikuliButtonAdvanced);
+        assertThat(environmentsPage.checkboxEnviromentMode.isVisible(),is(true));
         environmentsPage.checkboxEnviromentMode.click();
     }
 
     @Step
     public void clickOnTitleTemplates() throws FindFailed {
-        screen.click(environmentsPage.sikuliTitleTemplates);
+        assertThat(environmentsPage.titleTemplates.isVisible(),is(true));
+        environmentsPage.titleTemplates.click();
+//        screen.click(environmentsPage.sikuliTitleTemplates);
     }
 
     @Step
@@ -524,7 +565,8 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnTitleEnvironment() throws FindFailed {
-        screen.click(monitoringPage.sikuliTitleEnvironment);
+        assertThat(monitoringPage.EnvironmentTab.isVisible(),is(true));
+        monitoringPage.EnvironmentTab.click();
     }
 
     @Step
@@ -653,7 +695,9 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnTitleManagement() throws FindFailed {
-        screen.click(monitoringPage.sikuliTitleManagement);
+        assertThat(monitoringPage.ManagementTab.isVisible(),is(true));
+        monitoringPage.ManagementTab.click();
+//        screen.click(monitoringPage.sikuliTitleManagement);
     }
 
     @Step
@@ -663,7 +707,9 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnIconTemplateMaster() throws FindFailed {
-        screen.click(environmentsPage.sikuliTemplateMaster);
+        assertThat(environmentsPage.templateMaster.isVisible(),is(true));
+        environmentsPage.templateMaster.click();
+//        screen.click(environmentsPage.sikuliTemplateMaster);
     }
 
     @Step
@@ -929,6 +975,16 @@ public class SubutaiSteps extends ScenarioSteps {
     @Step
     public void userShouldObserveHeaderLogin() {
         assertThat(loginPage.headerLogin.isVisible(), is(true));
+    }
+
+    @Step
+    public void userShouldObserveNewPassword() {
+        assertThat(loginPage.inputNewPassword.isVisible(), is(true));
+    }
+
+    @Step
+    public void userShouldObserveConfirmPassword() {
+        assertThat(loginPage.inputConfirmPassword.isVisible(), is(true));
     }
 
     @Step

@@ -1,6 +1,7 @@
 package od.steps;
 
 import net.thucydides.core.annotations.Steps;
+import net.thucydides.core.reports.history.SystemDateProvider;
 import od.steps.serenity.SubutaiSteps;
 import org.jbehave.core.annotations.Then;
 import org.sikuli.script.FindFailed;
@@ -19,13 +20,20 @@ public class DefSubutaiStepsThen {
         subutaiSteps.userShouldObserveFieldPassword();
     }
 
+    @Then("the user should observe create password request")
+    public void user_observe_create_password_request(){
+        subutaiSteps.userShouldObserveHeaderLogin();
+        subutaiSteps.userShouldObserveNewPassword();
+        subutaiSteps.userShouldObserveConfirmPassword();
+    }
+
     @Then("the user should observe web elements on: Monitoring page")
     public void user_obseve_monitoring_page() throws FindFailed {
 //      subutaiSteps.userShouldObserveHeaderMonitoring();
         subutaiSteps.clickOnSelectorHostsMonitoringPage();
 //        subutaiSteps.userShouldObserveManagementHost();
         subutaiSteps.userShouldObserveResourceHost();
-        subutaiSteps.clickOnSelectorHostsMonitoringPage();
+//        subutaiSteps.clickOnSelectorHostsMonitoringPage();
         subutaiSteps.clickOnTitleEnvironment();
         subutaiSteps.userShouldObserveSelectorEnvironment();
         subutaiSteps.clickOnTitleManagement();
@@ -287,7 +295,7 @@ public class DefSubutaiStepsThen {
         subutaiSteps.clickOnIconDeleteEnvironment();
         subutaiSteps.clickOnButtonDelete();
 //        subutaiSteps.clickOnButtonOkPopupEnvironmentHasBeenDestroyed();
-//        subutaiSteps.waitFor(5000);
+        subutaiSteps.waitFor(5000);
     }
 
     @Then("the user unregister peer")

@@ -8,15 +8,24 @@ public class LoginPage extends PageObject {
 
     //region WEB ELEMENTS: Fields
 
-    @FindBy(name = "login")
-    public WebElementFacade inputLogin;
-
     @FindBy(id = "subt-input__password")
     public WebElementFacade inputPassword;
+
+    @FindBy(name = "new-password")
+    public WebElementFacade inputNewPassword;
+
+    @FindBy(name = "confirm-password")
+    public WebElementFacade inputConfirmPassword;
+
+    @FindBy(name = "login")
+    public WebElementFacade inputLogin;
 
     //endregion
 
     //region WEB ELEMENTS: Buttons
+
+    @FindBy(xpath = "*//button[contains(text(),\"Save and login\")]")
+    public WebElementFacade buttonSaveAndLogin;
 
     @FindBy(id = "subt-button__login")
     public WebElementFacade buttonLogin;
@@ -57,5 +66,8 @@ public class LoginPage extends PageObject {
     public WebElementFacade headerLogin;
 
     //endregion
+
+    @FindBy(xpath = "*//div[@class=\"b-form__error-message ng-binding ng-scope\"]")
+    public WebElementFacade LoginError;
 
 }

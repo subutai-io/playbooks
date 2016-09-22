@@ -36,6 +36,9 @@ public class EnvironmentsPage extends PageObject {
     @FindBy(xpath = "*//button[contains(text(), \"Delete\")]")
     public WebElementFacade buttonDelete;
 
+    @FindBy(xpath = "*//tip-cont/a[@class='b-icon b-icon_remove ng-scope']")
+    public WebElementFacade buttonDeleteEnvironment;
+
     @FindBy(xpath = "*//button[contains(text(),\"Close\")]")
     public WebElementFacade buttonClose;
 
@@ -63,6 +66,8 @@ public class EnvironmentsPage extends PageObject {
     //endregion
 
     //region WEB ELEMENTS: Links
+    @FindBy(xpath = "*//div[@class='b-workspace__environments ng-scope']/div[@class='b-workspace__content b-workspace__content_cloud-env']/div[@class='ng-scope']/div[@class='b-cloud ng-scope']/div[@class='b-cloud__tools']/div[@class='b-cloud-tools']/div[@class='b-tabs-menu b-tabs-menu_cloud-env']/ul/li[@class='b-tabs-menu__item js-hide-resources']")
+    public WebElementFacade titleTemplates;
 
     //endregion
 
@@ -131,6 +136,9 @@ public class EnvironmentsPage extends PageObject {
     //endregion
 
     //region WEB ELEMENTS: Headers
+
+    @FindBy(xpath = "*//span[@class=\"b-cloud-item-text ng-binding\" and contains(text(),\"master\")]")
+    public WebElementFacade templateMaster;
 
     @FindBy(xpath = "*//h1[contains(text(),\"Environment Manager\")]")
     public WebElementFacade headerEnvironments;

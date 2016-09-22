@@ -11,8 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.version>1.1.17</serenity.version>
-        <serenity.jbehave.version>1.1.0</serenity.jbehave.version>
+        <serenity.version>1.1.40</serenity.version>
+        <serenity.jbehave.version>1.5.0</serenity.jbehave.version>
         <webdriver.driver>firefox</webdriver.driver>
     </properties>
 
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-core</artifactId>
-            <version>1.1.22-rc.11</version>
+            <version>${serenity.version}</version>
         </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>

@@ -7,8 +7,9 @@ So that We create smoke test for it
 
 Scenario: The User should observe Subutai web elements (part 1)
 Given the first user is on the Home page of Subutai
-Given the user enters login and password: 'admin', 'test'
+When the user enters login and password: 'admin', 'secret'
 And the user clicks on the button: Login
+
 When the user clicks on the menu item: Monitoring
 Then the user should observe web elements on: Monitoring page
 When the user clicks on the upper menu item: Register Peer

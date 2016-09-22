@@ -148,7 +148,7 @@ public class CommonPages extends PageObject {
     @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//div[@class=\"body\"]")
     public WebElementFacade upperMenuLoginBody;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//li[@class=\"ng-scope\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status b-notification js-header-dropdown g-right b-notification_active\"]//a[@class=\"b-icon b-icon_bell js-notification\"]")
     public WebElementFacade upperMenuNotificationsBody;
 
     //endregion
@@ -185,7 +185,7 @@ public class CommonPages extends PageObject {
     @FindBy(xpath = "*//p[contains(text(), \"Your environment has been destroyed.\")]")
     public WebElementFacade textEnvironmentHasBeenDestroyed;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//div[contains(text(),\"Register Peer\")]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status js-header-dropdown g-right\"]")
     public WebElementFacade titleUpperMenuRegisterPeer;
 
     @FindBy(xpath = "*//p[contains(text(), \"Heartbeat sent successfully.\")]")
