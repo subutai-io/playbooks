@@ -1,10 +1,8 @@
 package od.steps;
 
 import net.thucydides.core.annotations.Steps;
-import net.thucydides.core.reports.history.SystemDateProvider;
 import od.steps.serenity.SubutaiSteps;
 import org.jbehave.core.annotations.Then;
-import org.sikuli.script.FindFailed;
 
 import java.io.FileNotFoundException;
 
@@ -14,21 +12,21 @@ public class DefSubutaiStepsThen {
     SubutaiSteps subutaiSteps;
 
     @Then("the user should observe web elements on: Login page")
-    public void user_observe_login_page(){
+    public void user_observe_login_page() {
         subutaiSteps.userShouldObserveHeaderLogin();
         subutaiSteps.userShouldObserveFieldLogin();
         subutaiSteps.userShouldObserveFieldPassword();
     }
 
     @Then("the user should observe create password request")
-    public void user_observe_create_password_request(){
+    public void user_observe_create_password_request() {
         subutaiSteps.userShouldObserveHeaderLogin();
         subutaiSteps.userShouldObserveNewPassword();
         subutaiSteps.userShouldObserveConfirmPassword();
     }
 
     @Then("the user should observe web elements on: Monitoring page")
-    public void user_obseve_monitoring_page() throws FindFailed {
+    public void user_obseve_monitoring_page() {
 //      subutaiSteps.userShouldObserveHeaderMonitoring();
         subutaiSteps.clickOnSelectorHostsMonitoringPage();
 //        subutaiSteps.userShouldObserveManagementHost();
@@ -40,20 +38,20 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: Blueprints page")
-    public void user_observe_blueprints(){
+    public void user_observe_blueprints() {
         subutaiSteps.userShouldObserveHeaderBlueprints();
         subutaiSteps.userShouldObserveButtonCreateBlueprints();
     }
 
     @Then("the user should observe web elements on: Environments page")
-    public void user_observe_environments(){
+    public void user_observe_environments() {
         subutaiSteps.userShouldObserveButtonModes();
         subutaiSteps.userShouldObserveButtonApply();
 //        subutaiSteps.userShouldObservePluginMongo();
     }
 
     @Then("the user should create the local environment")
-    public void user_should_create_local_environment() throws FindFailed {
+    public void user_should_create_local_environment() {
         subutaiSteps.clickOnTemplateWebdemo();
         subutaiSteps.clickOnButtonApply();
         subutaiSteps.inputEnvironmentName("Test Environment Webdemo");
@@ -67,13 +65,13 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: Containers page")
-    public void user_observe_containers(){
+    public void user_observe_containers() {
         subutaiSteps.userShouldObserveHeaderContainers();
         subutaiSteps.userShouldObserveFieldSearch();
     }
 
     @Then("the user should observe output of the pwd command")
-    public void user_observes_output_of_pwd_command() throws FindFailed {
+    public void user_observes_output_of_pwd_command() {
         subutaiSteps.seeOutputOfPwdCommand();
         subutaiSteps.clickOnSelectorHostsConsolePage();
         subutaiSteps.clickOnTitleEnvironment();
@@ -81,7 +79,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: User management page")
-    public void user_observe_user_management() throws FindFailed {
+    public void user_observe_user_management() {
         subutaiSteps.userShouldObserveHeaderUserManagement();
 //        subutaiSteps.userShouldObserveButtonAddUser();
     }
@@ -117,7 +115,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: Bazaar page")
-    public void user_observe_bazaar() throws FindFailed {
+    public void user_observe_bazaar() {
 //        subutaiSteps.userShouldObserveHeaderPlugins();
 //        subutaiSteps.userShouldObservePluginItems();
         subutaiSteps.clickOnTitleInstalled();
@@ -126,7 +124,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: Peer Settings page")
-    public void user_observe_peer_settings() throws FindFailed {
+    public void user_observe_peer_settings() {
 //        subutaiSteps.userShouldObserveHeaderPeerSettings();
         subutaiSteps.userShouldObserveButtonSetPeerOwner();
         subutaiSteps.clickOnTitlePolicy();
@@ -134,12 +132,12 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: About page")
-    public void user_observe_about(){
+    public void user_observe_about() {
         subutaiSteps.userShouldObserveHeaderAbout();
     }
 
     @Then("the user should observe web elements on drop down menu: Register Peer")
-    public void user_observe_upper_menu_elements(){
+    public void user_observe_upper_menu_elements() {
         subutaiSteps.userShouldObserveTitleRegisterPeer();
         subutaiSteps.userShouldObserveUpperMenuBody();
         subutaiSteps.userShouldObserveLinkSignUp();
@@ -147,25 +145,25 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on drop down menu: Notifications")
-    public void user_observe_elements_of_notifications(){
+    public void user_observe_elements_of_notifications() {
 //        subutaiSteps.userShouldObserveNotificationsBody();
         subutaiSteps.userShouldObserveLinkClear();
     }
 
     @Then("the user should observe user name: admin")
-    public void user_observe_name_admin(){
+    public void user_observe_name_admin() {
         subutaiSteps.userShouldObserveUserNameAdmin();
     }
 
     @Then("the user should observe web elements on: Advanced mode page")
-    public void user_observe_elements_on_advanced_page() throws FindFailed {
+    public void user_observe_elements_on_advanced_page() {
         subutaiSteps.userShouldObserveTitlePeers();
         subutaiSteps.clickOnTitleTemplates();
         subutaiSteps.userShouldObservePluginCassandra();
     }
 
     @Then("the user should observe web elements on: Kurjun page")
-    public void user_observe_elements_on_kurjun_page() throws FindFailed {
+    public void user_observe_elements_on_kurjun_page() {
         subutaiSteps.userShouldObserveGreenButton();
         subutaiSteps.clickOnTitleAPT();
         subutaiSteps.userShouldObserveGreenButton();
@@ -176,7 +174,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: Account Settings page")
-    public void user_observe_elements_on_account_settings_page() throws FindFailed {
+    public void user_observe_elements_on_account_settings_page() {
 //        subutaiSteps.userShouldObserveFieldPGP();
 //        subutaiSteps.userShouldObserveButtonSetPublicKey();
         subutaiSteps.clickOnTitleChangePassword();
@@ -184,7 +182,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: Kurjun Settings page")
-    public void user_observe_elements_on_kurjun_settings_page() throws FindFailed {
+    public void user_observe_elements_on_kurjun_settings_page() {
         subutaiSteps.userShouldObserveButtonSaveOnKurjunSettingsPage();
         subutaiSteps.userShouldObserveButtonAddOnKurjunSettingsPage();
         subutaiSteps.clickOnTitleQuotas();
@@ -194,13 +192,13 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe web elements on: Network Settings page")
-    public void user_observe_elements_on_network_settings(){
+    public void user_observe_elements_on_network_settings() {
         subutaiSteps.userShouldObserveHeaderNetworkSettings();
         subutaiSteps.userShouldObserveButtonSaveOnNetworkSettingsPage();
     }
 
     @Then("the user should observe web elements on: Advanced page")
-    public void user_observe_elements_on_advanced() throws FindFailed {
+    public void user_observe_elements_on_advanced() {
 //        subutaiSteps.userShouldObserveHeaderAdvanced();
         subutaiSteps.clickOnTitleLogs();
         subutaiSteps.userShouldObserveButtonExport();
@@ -208,7 +206,7 @@ public class DefSubutaiStepsThen {
 
     @Then("the user should register a new user: '$username', '$fullname', '$email', '$password', '$confirmpassword'")
     public void user_register_new_user(String username, String fullname, String email,
-                                       String password, String confirmpassword) throws FindFailed {
+                                       String password, String confirmpassword) {
         subutaiSteps.clickOnButtonAddUser();
         subutaiSteps.inputNewUserUsername(username);
         subutaiSteps.inputNewUserFullName(fullname);
@@ -222,7 +220,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should change password: '$oldpass', '$newpass', '$confpass'")
-    public void change_password(String oldpass, String password, String confpass) throws FindFailed {
+    public void change_password(String oldpass, String password, String confpass) {
         subutaiSteps.inputOldPassword(oldpass);
         subutaiSteps.inputNepPassword(password);
         subutaiSteps.inputConfirmPassword(confpass);
@@ -231,12 +229,12 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe a new user")
-    public void user_observe_a_new_user(){
+    public void user_observe_a_new_user() {
         subutaiSteps.userShouldObserveANewUsersEmail();
     }
 
     @Then("the user should delete the role: Internal-System")
-    public void user_delete_the_role_internal_system() throws FindFailed {
+    public void user_delete_the_role_internal_system() {
         subutaiSteps.clickOnIconDeleteRoleInternalSystem();
         subutaiSteps.clickOnRemoveRoleButton();
         subutaiSteps.clickOnButtonOkRoleRemoved();
@@ -244,7 +242,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should delete a new user")
-    public void user_delete_a_new_user() throws FindFailed {
+    public void user_delete_a_new_user() {
         subutaiSteps.clickOnButtonRemoveUser();
         subutaiSteps.clickOnButtonDelete();
         subutaiSteps.clickOnButtonOkDeleteUser();
@@ -256,34 +254,34 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should observe button: Go To HUB Green")
-    public void should_see_button_go_to_hub(){
+    public void should_see_button_go_to_hub() {
         subutaiSteps.assertButtonGoToHUB();
     }
 
     @Then("the user should observe message: Heartbeat sent successfully")
-    public void should_observe_message_heartbeat_sent(){
+    public void should_observe_message_heartbeat_sent() {
         subutaiSteps.assertMessageHeartbeatSentSuccessfully();
     }
 
     @Then("the user should observe button: Send Heartbeat")
-    public void should_observe_button_send_heartbeat(){
+    public void should_observe_button_send_heartbeat() {
         subutaiSteps.assertButtonSendHeartbeat();
     }
 
     @Then("the user should create a peer request with: '$ip', '$key'")
-    public void should_create_a_peer_request(String ip, String key) throws FindFailed {
+    public void should_create_a_peer_request(String ip, String key) {
         subutaiSteps.inputPeerIP(ip);
         subutaiSteps.inputPeerKeyPhrase(key);
         subutaiSteps.clickOnButtonCreate();
     }
 
     @Then("the user should observe button: Cancel")
-    public void should_observe_button_cancel_request(){
+    public void should_observe_button_cancel_request() {
         subutaiSteps.assertButtonCancelPeerRequest();
     }
 
     @Then("the user should approve the peer with: '$key'")
-    public void should_approve_peer(String key) throws FindFailed {
+    public void should_approve_peer(String key) {
         subutaiSteps.clickbuttonApprove();
         subutaiSteps.inputApprovePeerKeyPhrase(key);
         subutaiSteps.clickbuttonApprovePopUp();
@@ -291,7 +289,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user destroys created environment")
-    public void user_delete_environment() throws FindFailed {
+    public void user_delete_environment() {
         subutaiSteps.clickOnIconDeleteEnvironment();
         subutaiSteps.clickOnButtonDelete();
 //        subutaiSteps.clickOnButtonOkPopupEnvironmentHasBeenDestroyed();
@@ -299,38 +297,38 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user unregister peer")
-    public void user_unregister_peer() throws FindFailed {
+    public void user_unregister_peer() {
         subutaiSteps.clickOnButtonUnregister();
         subutaiSteps.clickOnButtonUnregisterPopup();
         subutaiSteps.clickOnButtonOkUnregisterPeer();
     }
 
     @Then("the user should put the First RH in workspace")
-    public void user_put_the_first_rh() throws FindFailed {
+    public void user_put_the_first_rh() {
         subutaiSteps.clickOnPeer1();
         subutaiSteps.clickOnResourceHost1();
     }
 
     @Then("the user should put the Second RH in workspace")
-    public void user_put_the_second_rh() throws FindFailed {
+    public void user_put_the_second_rh() {
         subutaiSteps.clickOnPeer2();
         subutaiSteps.clickOnResourceHost1();
     }
 
     @Then("the user should drag and drop template to RH1: Master")
-    public void user_drag_and_drop_master_to_rh1() throws FindFailed {
+    public void user_drag_and_drop_master_to_rh1() {
 //        subutaiSteps.userShouldObservePNGs();
         subutaiSteps.dragAndDropTemplateMasterToRH1();
     }
 
     @Then("the user should drag and drop template to RH2: Master")
-    public void user_drag_and_drop_master_to_rh2() throws FindFailed {
+    public void user_drag_and_drop_master_to_rh2() {
 //        subutaiSteps.userShouldObservePNGs();
         subutaiSteps.dragAndDropTemplateMasterToRH2();
     }
 
     @Then("the user should create an environment")
-    public void user_create_an_environment() throws FindFailed {
+    public void user_create_an_environment() {
         subutaiSteps.clickOnButtonApply();
         subutaiSteps.inputEnvironmentName("Test environment");
         subutaiSteps.clickOnButtonBuild();
@@ -339,18 +337,18 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user search plugin: '$plugin'")
-    public void user_search_plugin(String plugin){
+    public void user_search_plugin(String plugin) {
         subutaiSteps.inputPluginName(plugin);
     }
 
     @Then("the user chooses the environment")
-    public void user_chooses_enviroenment() throws FindFailed {
+    public void user_chooses_enviroenment() {
         subutaiSteps.clickOnSelectorEnvironment();
         subutaiSteps.clickOnEnvironmentFromSelector();
     }
 
     @Then("the user creates profile name")
-    public void user_creates_profile_name() throws FindFailed {
+    public void user_creates_profile_name() {
         subutaiSteps.inputProfileName("test profile");
         subutaiSteps.clickOnButtonCreate();
         subutaiSteps.clickOnButtonOk();
@@ -358,7 +356,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should add an operation")
-    public void user_add_operation() throws FindFailed {
+    public void user_add_operation() {
         subutaiSteps.inputOperationName("ls_operation");
         subutaiSteps.inputOperation("ls");
         subutaiSteps.clickOnButtonSave();
@@ -366,57 +364,57 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should execute the ls opeartion")
-    public void user_execute_ls_operation() throws FindFailed {
+    public void user_execute_ls_operation() {
         subutaiSteps.clickOnButtonExecute();
         subutaiSteps.seeOutputOfLsCommand();
     }
 
     @Then("the user should delete a profile")
-    public void delete_profile() throws FindFailed {
+    public void delete_profile() {
         subutaiSteps.clickOnIconDeleteEnvironment();
         subutaiSteps.clickOnButtonDelete();
         subutaiSteps.clickOnButtonOk();
     }
 
     @Then("the user uninstall plugin")
-    public void user_uninstall_plugin() throws FindFailed {
+    public void user_uninstall_plugin() {
         subutaiSteps.clickOnButtonUninstall();
     }
 
     @Then("the user clicks button: Quick install")
-    public void user_clicks_quick_install() throws FindFailed {
+    public void user_clicks_quick_install() {
         subutaiSteps.clickOnButtonQuickInstall();
     }
 
     @Then("the user clicks on the buton: Console")
-    public void user_clicks_button_console() throws FindFailed {
+    public void user_clicks_button_console() {
         subutaiSteps.clickOnButtonConsole();
     }
 
     @Then("the user should observe button: Console")
-    public void user_observe_button_console(){
+    public void user_observe_button_console() {
         subutaiSteps.userShouldObserveButtonConsole();
     }
 
     @Then("the user fills out Quick Install")
-    public void user_fills_quick_install() throws FindFailed {
+    public void user_fills_quick_install() {
         subutaiSteps.inputAppScaleEnvironmentName("AppScaleEnvi");
         subutaiSteps.inputDomain("test.ai");
         subutaiSteps.clickOnButtonInstall();
     }
 
     @Then("the user should observe 3 containers")
-    public void user_observe_three_containers(){
+    public void user_observe_three_containers() {
         subutaiSteps.userShouldObserveThreeContainers();
     }
 
     @Then("the user should observe 2 containers")
-    public void user_observe_2_containers(){
+    public void user_observe_2_containers() {
         subutaiSteps.userShouldObserveTwoContainers();
     }
 
     @Then("the user uploads template")
-    public void user_upload_template() throws FindFailed {
+    public void user_upload_template() {
         subutaiSteps.clickOnButtonBrowse();
         subutaiSteps.clickOnButtonOpen();
         subutaiSteps.clickOnButtonAdd();
@@ -424,27 +422,28 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user should click on admin icon")
-    public void user_click_on_admin_icon() throws FindFailed {
+    public void user_click_on_admin_icon() {
         subutaiSteps.waitABit(5000);
         subutaiSteps.clickOniconAdmin();
     }
+
     @Then("the user should click on test icon")
-    public void user_click_on_test_icon() throws FindFailed {
+    public void user_click_on_test_icon() {
         subutaiSteps.clickOnIconTest();
     }
 
     @Then("the user clicks on the button: OK")
-    public void user_click_on_button_ok() throws FindFailed {
+    public void user_click_on_button_ok() {
         subutaiSteps.clickOnButtonOk();
     }
 
     @Then("the user should observe role: iManagement")
-    public void user_observe_role_imanagement(){
+    public void user_observe_role_imanagement() {
         subutaiSteps.userShouldObserveIManagement();
     }
 
     @Then("the user should delete the role: iManagement")
-    public void user_delete_role_imanagement() throws FindFailed {
+    public void user_delete_role_imanagement() {
         subutaiSteps.inputNameInSearchField("iManagement");
         subutaiSteps.clickOnIconDeleteRole();
         subutaiSteps.clickOnButtonDelete();
@@ -452,19 +451,19 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user set domain")
-    public void user_set_domain() throws FindFailed {
+    public void user_set_domain() {
         subutaiSteps.inputSetDomainName("test.qa");
         subutaiSteps.clickOnButtonSave();
         subutaiSteps.clickOnButtonOk();
     }
 
     @Then("the user should observe header apache")
-    public void user_observe_header_apache(){
+    public void user_observe_header_apache() {
         subutaiSteps.userShouldObserveHeaderApache();
     }
 
     @Then("the user chooses the medium size of template cassandra")
-    public void user_choose_the_medium_size_of_cont_cassandra() throws FindFailed {
+    public void user_choose_the_medium_size_of_cont_cassandra() {
         subutaiSteps.clickOnIconSettingsCont();
         subutaiSteps.clickOnPickerSmall();
         subutaiSteps.clickOnPickerMedium();
@@ -472,14 +471,15 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user chooses the medium size of first template cassandra")
-    public void user_choose_the_medium_size_of_first_cont_cassandra() throws FindFailed {
+    public void user_choose_the_medium_size_of_first_cont_cassandra() {
         subutaiSteps.clickOnIconSettingsFirstCont();
         subutaiSteps.clickOnPickerSmall();
         subutaiSteps.clickOnPickerMedium();
         subutaiSteps.clickOnButtonSave();
     }
+
     @Then("the user chooses the medium size of second template cassandra")
-    public void user_choose_the_medium_size_of_second_cont_cassandra() throws FindFailed {
+    public void user_choose_the_medium_size_of_second_cont_cassandra() {
         subutaiSteps.clickOnIconSettingsSecondCont();
         subutaiSteps.clickOnPickerSmall();
         subutaiSteps.clickOnPickerMedium();
@@ -487,7 +487,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user chooses the medium size of third template cassandra")
-    public void user_choose_the_medium_size_of_third_cont_cassandra() throws FindFailed {
+    public void user_choose_the_medium_size_of_third_cont_cassandra() {
         subutaiSteps.clickOnIconSettingsThirdContCass();
         subutaiSteps.clickOnPickerSmall();
         subutaiSteps.clickOnPickerMedium();
@@ -495,7 +495,7 @@ public class DefSubutaiStepsThen {
     }
 
     @Then("the user gets token")
-    public void user_gets_token() throws FindFailed {
+    public void user_gets_token() {
         subutaiSteps.clickOnButtonShowToken();
         subutaiSteps.getToken();
     }

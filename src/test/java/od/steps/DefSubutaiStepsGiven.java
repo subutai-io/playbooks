@@ -4,7 +4,6 @@ import net.thucydides.core.annotations.Steps;
 import od.steps.serenity.SubutaiSteps;
 import org.jbehave.core.annotations.Given;
 import org.junit.Before;
-import org.sikuli.script.FindFailed;
 
 import java.io.FileNotFoundException;
 
@@ -35,12 +34,12 @@ public class DefSubutaiStepsGiven {
     }
 
     @Given("the user clicks on the button: Login")
-    public void clicks_button_login() throws FindFailed {
+    public void clicks_button_login() {
         subutaiSteps.clickOnButtonLogin();
     }
 
     @Given("the user configure pgp plugin")
-    public void configurePgpPlugin() throws FindFailed, InterruptedException {
+    public void configurePgpPlugin() throws InterruptedException {
         subutaiSteps.clickOnIconPgp();
         subutaiSteps.clickOnButtonOptions();
         subutaiSteps.typeInFieldsPgp();
@@ -54,7 +53,6 @@ public class DefSubutaiStepsGiven {
     public void recordStartVideo() throws FileNotFoundException {
         subutaiSteps.run_bash_script("src/test/resources/files/recordScreenStart.sh");
     }
-
 
 
 }
