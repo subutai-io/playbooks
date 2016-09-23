@@ -148,7 +148,7 @@ public class CommonPages extends PageObject {
     @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//div[@class=\"body\"]")
     public WebElementFacade upperMenuLoginBody;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status b-notification js-header-dropdown g-right b-notification_active\"]//a[@class=\"b-icon b-icon_bell js-notification\"]")
+    @FindBy(xpath = "*//div[@class='b-hub-status b-notification js-header-dropdown g-right']/a[@class='b-icon b-icon_bell js-notification']")
     public WebElementFacade upperMenuNotificationsBody;
 
     //endregion
