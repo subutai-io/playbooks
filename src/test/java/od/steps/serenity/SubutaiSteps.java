@@ -250,8 +250,9 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnSelectorHostsMonitoringPage() {
-        assertThat(monitoringPage.selectorHosts.isCurrentlyEnabled(), is(true));
-        monitoringPage.selectorHosts.click();
+        waitABit(2000);
+        assertThat(monitoringPage.selectorHosts.isVisible(), is(true));
+        monitoringPage.selectorHosts.waitUntilClickable().click();
     }
 
     @Step

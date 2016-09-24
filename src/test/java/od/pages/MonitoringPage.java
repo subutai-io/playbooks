@@ -50,6 +50,9 @@ public class MonitoringPage extends PageObject {
     @FindBy(xpath = "*//option[contains(text(),\"intra\")]")
     public WebElementFacade selectorHostsItemRecourceHost;
 
+    @FindBy(xpath = "*//div[class=\"b-loading-screen js-loading-screen\"]")
+    public WebElementFacade blockScreen;
+
     //endregion
 
     //region WEB ELEMENTS: Images
