@@ -36,6 +36,9 @@ public class EnvironmentsPage extends PageObject {
     @FindBy(xpath = "*//button[contains(text(), \"Delete\")]")
     public WebElementFacade buttonDelete;
 
+    @FindBy(xpath = "*//tbody[@class='ng-scope']")
+    public WebElementFacade EnvironmentLine;
+
     @FindBy(xpath = "*//tip-cont/a[@class='b-icon b-icon_remove ng-scope']")
     public WebElementFacade buttonDeleteEnvironment;
 

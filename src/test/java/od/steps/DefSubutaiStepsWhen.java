@@ -411,7 +411,7 @@ public class DefSubutaiStepsWhen {
 
     @When("the user clicks on the icon: delete")
     public void user_clicks_icon_delete() {
-        subutaiSteps.clickOnIconDeleteEnvironment();
+        subutaiSteps.clickOnIconDeleteEnvironment("Test Environment Master");
     }
 
     @When("the user clicks on the button: delete")
