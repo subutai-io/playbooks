@@ -64,7 +64,7 @@ public class EnvironmentsPage extends PageObject {
     //region WEB ELEMENTS: Checkboxes
 
     @FindBy(xpath = "*//div[@class=\"b-toggle b-toggle_cloud\"]")
-    public WebElementFacade checkboxEnviromentMode;
+    public WebElementFacade checkboxEnvironmentMode;
 
     //endregion
 

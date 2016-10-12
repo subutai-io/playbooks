@@ -456,8 +456,8 @@ public class SubutaiSteps extends ScenarioSteps {
     @Step
     public void clickOnAdvancedMode() {
         ////screen.click(environmentsPage.sikuliButtonAdvanced);
-        assertThat(environmentsPage.checkboxEnviromentMode.isVisible(), is(true));
-        environmentsPage.checkboxEnviromentMode.click();
+        assertThat(environmentsPage.checkboxEnvironmentMode.isVisible(), is(true));
+        environmentsPage.checkboxEnvironmentMode.click();
     }
 
     @Step
