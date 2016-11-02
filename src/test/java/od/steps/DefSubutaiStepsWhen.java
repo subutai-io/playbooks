@@ -119,7 +119,7 @@ public class DefSubutaiStepsWhen {
         subutaiSteps.clickOnIconTemplateMaster();
         subutaiSteps.clickOnIconTemplateMaster();
         subutaiSteps.clickOnButtonApply();
-        subutaiSteps.inputEnvironmentName("Test Environment Master");
+        subutaiSteps.inputEnvironmentName("TestEnvironmentMaster");
         subutaiSteps.clickOnButtonBuild();
         subutaiSteps.clickOnButtonCloseBuildPopup();
         subutaiSteps.waitFor(5000);
@@ -411,7 +411,7 @@ public class DefSubutaiStepsWhen {
 
     @When("the user clicks on the icon: delete")
     public void user_clicks_icon_delete() {
-        subutaiSteps.clickOnIconDeleteEnvironment("Test Environment Master");
+        subutaiSteps.clickOnIconDeleteEnvironment("TestEnvironmentMaster");
     }
 
     @When("the user clicks on the button: delete")

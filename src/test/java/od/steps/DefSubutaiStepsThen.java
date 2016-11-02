@@ -290,7 +290,7 @@ public class DefSubutaiStepsThen {
 
     @Then("the user destroys created environment")
     public void user_delete_environment() {
-        subutaiSteps.clickOnIconDeleteEnvironment("Test Environment Master");
+        subutaiSteps.clickOnIconDeleteEnvironment("TestEnvironmentMaster");
         subutaiSteps.clickOnButtonDelete();
 //        subutaiSteps.clickOnButtonOkPopupEnvironmentHasBeenDestroyed();
         subutaiSteps.waitFor(5000);
@@ -371,7 +371,7 @@ public class DefSubutaiStepsThen {
 
     @Then("the user should delete a profile")
     public void delete_profile() {
-        subutaiSteps.clickOnIconDeleteEnvironment("Test Environment Master");
+        subutaiSteps.clickOnIconDeleteEnvironment("TestEnvironmentMaster");
         subutaiSteps.clickOnButtonDelete();
         subutaiSteps.clickOnButtonOk();
     }
