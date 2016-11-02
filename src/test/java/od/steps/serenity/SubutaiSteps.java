@@ -370,13 +370,16 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void clickOnIconDeleteEnvironment(String env_name) {
-        assertThat(environmentsPage.EnvironmentLine.findBy(
-                org.openqa.selenium.By.xpath("tr[.//a[contains(text(),'" + env_name + "')]]/*//a[@class='b-icon b-icon_remove ng-scope']")
-        ).isVisible(), is(true));
+        assertThat(environmentsPage.buttonDeleteEnvironment.isVisible(), is(true));
+        environmentsPage.buttonDeleteEnvironment.click();
 
-        environmentsPage.EnvironmentLine.findBy(
-                org.openqa.selenium.By.xpath("tr[.//*[contains(text(),'" + env_name + "')]]/*//a[@class='b-icon b-icon_remove ng-scope']")
-        ).click();
+//        assertThat(environmentsPage.EnvironmentLine.findBy(
+//                org.openqa.selenium.By.xpath("tr[.//a[contains(text(),'" + env_name + "')]]/*//a[@class='b-icon b-icon_remove ng-scope']")
+//        ).isVisible(), is(true));
+//
+//        environmentsPage.EnvironmentLine.findBy(
+//                org.openqa.selenium.By.xpath("tr[.//*[contains(text(),'" + env_name + "')]]/*//a[@class='b-icon b-icon_remove ng-scope']")
+//        ).click();
     }
 
     @Step
