@@ -99,7 +99,7 @@ public class CommonPages extends PageObject {
     @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//a[@class=\"b-form-label\"]")
     public WebElementFacade linkSignUp;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//a[@class=\"show-more\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//a[@class=\"show-more\"]")
     public WebElementFacade linkClear;
 
     @FindBy(xpath = "*//a[@class=\"b-header-userbar-name ng-binding\"]")
