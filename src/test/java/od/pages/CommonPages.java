@@ -21,7 +21,7 @@ public class CommonPages extends PageObject {
 
     //region WEB ELEMENTS: Buttons
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//button[@class=\"b-btn b-btn_green g-right\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//button[@class=\"b-btn b-btn_green g-right\"]")
     public WebElementFacade buttonRegister;
 
     @FindBy(xpath = "*//button[@class=\"b-btn b-btn_green b-btn_search-field-level\"]")
@@ -96,10 +96,10 @@ public class CommonPages extends PageObject {
     @FindBy(id = "subt-link__about")
     public WebElementFacade linkAbout;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//a[@class=\"b-form-label\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//a[@class=\"b-form-label\"]")
     public WebElementFacade linkSignUp;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//a[@class=\"show-more\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//a[@class=\"show-more\"]")
     public WebElementFacade linkClear;
 
     @FindBy(xpath = "*//a[@class=\"b-header-userbar-name ng-binding\"]")
