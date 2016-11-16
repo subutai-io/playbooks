@@ -145,7 +145,7 @@ public class CommonPages extends PageObject {
 
     //region WEB ELEMENTS: Tables
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//div[@class=\"body\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//div[@class=\"body\"]")
     public WebElementFacade upperMenuLoginBody;
 
     @FindBy(xpath = "*//div[starts-with(@class, 'b-hub-status b-notification js-header-dropdown g-right')]//a[@class='b-icon b-icon_bell js-notification']")
