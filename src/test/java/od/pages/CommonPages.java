@@ -185,7 +185,7 @@ public class CommonPages extends PageObject {
     @FindBy(xpath = "*//p[contains(text(), \"Your environment has been destroyed.\")]")
     public WebElementFacade textEnvironmentHasBeenDestroyed;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status js-header-dropdown g-right\"]")
+    @FindBy(id = "hub-button")
     public WebElementFacade titleUpperMenuRegisterPeer;
 
     @FindBy(xpath = "*//p[contains(text(), \"Heartbeat sent successfully.\")]")
