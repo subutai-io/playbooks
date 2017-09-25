@@ -21,7 +21,7 @@ public class CommonPages extends PageObject {
 
     //region WEB ELEMENTS: Buttons
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//button[@class=\"b-btn b-btn_green g-right\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//button[@class=\"b-btn b-btn_green g-right\"]")
     public WebElementFacade buttonRegister;
 
     @FindBy(xpath = "*//button[@class=\"b-btn b-btn_green b-btn_search-field-level\"]")
@@ -96,7 +96,7 @@ public class CommonPages extends PageObject {
     @FindBy(id = "subt-link__about")
     public WebElementFacade linkAbout;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//a[@class=\"b-form-label\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//a[@class=\"b-form-label\"]")
     public WebElementFacade linkSignUp;
 
     @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//a[@class=\"show-more\"]")
@@ -145,7 +145,7 @@ public class CommonPages extends PageObject {
 
     //region WEB ELEMENTS: Tables
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown b-hub-status__dropdown_open\"]//div[@class=\"body\"]")
+    @FindBy(xpath = "*//div[@class=\"b-hub-status__dropdown ng-scope b-hub-status__dropdown_open\"]//div[@class=\"body\"]")
     public WebElementFacade upperMenuLoginBody;
 
     @FindBy(xpath = "*//div[starts-with(@class, 'b-hub-status b-notification js-header-dropdown g-right')]//a[@class='b-icon b-icon_bell js-notification']")
@@ -185,7 +185,7 @@ public class CommonPages extends PageObject {
     @FindBy(xpath = "*//p[contains(text(), \"Your environment has been destroyed.\")]")
     public WebElementFacade textEnvironmentHasBeenDestroyed;
 
-    @FindBy(xpath = "*//div[@class=\"b-hub-status js-header-dropdown g-right\"]")
+    @FindBy(id = "hub-button")
     public WebElementFacade titleUpperMenuRegisterPeer;
 
     @FindBy(xpath = "*//p[contains(text(), \"Heartbeat sent successfully.\")]")
