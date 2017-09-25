@@ -47,7 +47,7 @@ public class MonitoringPage extends PageObject {
     @FindBy(xpath = "*//option[contains(text(),\"management\")]")
     public WebElementFacade selectorHostsItemManagementHost;
 
-    @FindBy(xpath = "*//option[contains(text(),\"LOCAL\")]")
+    @FindBy(xpath = "*//option[contains(text(),\"MH\")]")
     public WebElementFacade selectorHostsItemRecourceHost;
 
     @FindBy(xpath = "*//div[class=\"b-loading-screen js-loading-screen\"]")
