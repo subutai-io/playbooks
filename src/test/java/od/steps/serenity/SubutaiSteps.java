@@ -146,7 +146,7 @@ public class SubutaiSteps extends ScenarioSteps {
 
     @Step
     public void inputTemplateNameInSearchField(String name) {
-        waitABit(7000);
+        waitABit(5000);
         environmentsPage.fieldSearch.type(name);
     }
 
