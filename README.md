@@ -1,4 +1,4 @@
-# Acceptance tests for Subutai Social
+# Acceptance tests for Subutai Console
 
 Dependencies:
 
